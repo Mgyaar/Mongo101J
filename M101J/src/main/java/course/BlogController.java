@@ -1,30 +1,33 @@
 package course;
 
 
-import com.mongodb.DB;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import freemarker.template.Configuration;
-import freemarker.template.SimpleHash;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
-import org.apache.commons.lang3.StringEscapeUtils;
-import spark.Request;
-import spark.Response;
-import spark.Route;
+import static spark.Spark.get;
+import static spark.Spark.post;
+import static spark.Spark.setPort;
 
-import javax.servlet.http.Cookie;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
-import static spark.Spark.setPort;
+import javax.servlet.http.Cookie;
+
+import org.apache.commons.lang3.StringEscapeUtils;
+
+import spark.Request;
+import spark.Response;
+import spark.Route;
+
+import com.mongodb.DB;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+
+import freemarker.template.Configuration;
+import freemarker.template.SimpleHash;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
 
 /**
  * This class encapsulates the controllers for the blog web application.  It delegates all interaction with MongoDB
